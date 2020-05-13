@@ -1,0 +1,23 @@
+.header
+  %h1 Childendance
+  %p 出欠確認アプリケーション
+
+#account-page.account-page
+  .account-page__inner
+    .account-page__inner--user-form
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field
+          .field-label
+            = f.label :メールアドレス
+            %p (ご登録のメールアドレスをご入力ください)
+          .field-input
+            = f.email_field :email, autofocus: true
+          .field
+            .field-label
+              = f.label :パスワード
+              %p (ご登録のパスワードをご入力ください)
+            .field-input
+              = f.password_field :password, autocomplete: "off"
+          .actions
+            = f.submit "ログイン", class: 'btn'
+      = render "devise/shared/links"
