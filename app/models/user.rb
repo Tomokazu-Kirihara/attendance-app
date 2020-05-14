@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :day_users
   has_many :days, through: :day_users
+  has_many :messages
 end

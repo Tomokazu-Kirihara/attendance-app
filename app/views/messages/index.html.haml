@@ -3,27 +3,41 @@
   %p 出欠確認アプリケーション
 
 .main
-  .main__side-ber
-    .main__side-ber__days
-      = link_to '出欠確認ページへ','#' 
-      - current_user.days.each do |day|
-        =day.dayname
-
   .main__main-ber
-    .main__main-ber__table-box
-      = form_for @day do |f|
-        = f.date_field :dayname
-        = f.submit "確認", class: "action-btn"
-        %p ※日付選択し、出欠チェック後に確認ボタンをクリック
-        .main__main-ber__table-box__check
-          %table
+    .main__main-ber__check-box
+      .main__main-ber__check-box__name-check
+        【管理者専用】
+        = form_for @day do |f|
+          = f.date_field :dayname
+          = f.submit "確認完了", class: "action-btn"
+          %p ※日付を選択し、ひとりひとり出欠確認時に
+          %p 　チェック、完了後に確認ボタンをクリック
+          .main__main-ber__check-box__name-check__check
+            %table
+              %tr
+                %th.name 名前
+                %th.check 出欠確認
+              = f.collection_check_boxes :user_ids, User.where.not(name: "master").order(name: "ASC"), :id, :name do |user|
+                =user.label do
+                  %tr
+                    %td= user.object.name
+                    %td= user.check_box
+      .main__main-ber__check-box__message-box
+        .main__main-ber__check-box__message-box__title
+          欠席連絡掲示板
+        %table
+          %tr
+            %th.day 日付
+            %th.name 名前
+            %th.absence 内容
+            %th.body 事由
+        - @messages.each do |message|
+          .main__main-ber__check-box__message-box__message-list
             %tr
-              %th 名前
-            = f.collection_check_boxes :user_ids, User.where.not(name: "master"), :id, :name do |user|
-              =user.label do
-                %tr
-                  %td= user.object.name
-                  %td= user.check_box
+              %td= message.dayname
+              %td= message.user.name
+              %td= message.absence
+              %td= message.body
 
 
     .main__main-ber__message-form
@@ -32,14 +46,16 @@
         = link_to edit_user_path(current_user) do
           = icon('fas','cog')
         ユーザー情報編集
-      .main__main-ber__message-form__day-set
-        = form_for @day do |f|
-          = f.date_field :dayname
-          = f.submit "確認", class: "action-btn"
-      .main__main-ber__message-form__message-set
-        = form_for '#' do |f|
-          = f.select :absence, [["",0], ["欠席",1], ["遅刻",2], ["早退",3]]
-          = f.text_field :comment, class: 'input-message', placeholder: '(例)発熱：38.5℃  インフルエンザ検査の為、病院へ'
-          =f.submit '送信', class: 'send-btn'
-      .main__main-ber__message-form__session
-        ※①日付選択し確認ボタンをクリック  ②欠席or遅刻or早退を選択しその事由を入力後、送信ボタンをクリック
+        = form_for Message.new do |f|
+          .main__main-ber__message-form__day-set
+            = f.date_field :dayname
+          .main__main-ber__message-form__message-set
+            = f.select :absence, [["","○"], ["欠席","欠席"], ["遅刻","遅刻"], ["早退","早退"]]
+            = f.text_field :body, class: 'input-message', placeholder: '(例)発熱：38.5℃  インフルエンザ検査の為、病院へ'
+            =f.submit '送信', class: 'send-btn'
+        .main__main-ber__message-form__session
+          ※①日付を選択  ②欠席or遅刻or早退を選択  ③その事由を入力  ④送信ボタンをクリック
+
+  .main__side-ber
+    .main__side-ber__days
+      【データ保存】

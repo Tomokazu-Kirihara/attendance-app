@@ -42,7 +42,6 @@ Things you may want to cover:
   |dayname|date|null: false|
   ### Association
   - has_many :users, througt: :days_users
-  - has_many :messages
   - has_many :days_users
 
   ## messagesテーブル
@@ -55,7 +54,6 @@ Things you may want to cover:
   |day_id|integer|null: false, foreign_key: true|
   ### Association
   - belongs_to :user
-  - belongs_to :day
 
   ## days_usersテーブル
   |Column|Type|Options|
