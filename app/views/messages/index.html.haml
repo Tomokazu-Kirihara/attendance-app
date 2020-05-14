@@ -5,26 +5,25 @@
 .main
   .main__side-ber
     .main__side-ber__days
-      2020年5月13日
+      = link_to '出欠確認ページへ','#' 
+      - current_user.days.each do |day|
+        =day.dayname
 
   .main__main-ber
     .main__main-ber__table-box
-      = form_for '#' do |f|
-        = f.date_field :day
+      = form_for @day do |f|
+        = f.date_field :dayname
         = f.submit "確認", class: "action-btn"
         %p ※日付選択し、出欠チェック後に確認ボタンをクリック
-        .main__main-ber__table-box__table
+        .main__main-ber__table-box__check
           %table
             %tr
-              %th.check チェック
-              %th.name 名前
-              %th.attendance 出欠
-              %th.message 事由
-            %tr
-              %td.check box
-              %td.name 桐原友和
-              %td.attendance 欠席
-              %td 寝坊
+              %th 名前
+            = f.collection_check_boxes :user_ids, User.where.not(name: "master"), :id, :name do |user|
+              =user.label do
+                %tr
+                  %td= user.object.name
+                  %td= user.check_box
 
 
     .main__main-ber__message-form
@@ -34,8 +33,8 @@
           = icon('fas','cog')
         ユーザー情報編集
       .main__main-ber__message-form__day-set
-        = form_for '#' do |f|
-          = f.date_field :day
+        = form_for @day do |f|
+          = f.date_field :dayname
           = f.submit "確認", class: "action-btn"
       .main__main-ber__message-form__message-set
         = form_for '#' do |f|

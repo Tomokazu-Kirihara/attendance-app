@@ -51,31 +51,11 @@
         background-color: white;
         cursor: pointer;
       }
-      &__table {
-        padding-top: 10px;
-        tr {
-          border: solid 1px gray;
-        }
-        .check {
-          width: 100px;
-          text-align: center;
-        }
-        .name {
-          width: 200px;
-          text-align: center;
-        }
-        .attendance {
-          width: 100px;
-          text-align: center;
-        }
-        .message {
-          width: 500px;
-          text-align: center;
-        }
+      &__check {
+        
       }
     }
     &__message-form {
-      
       background-color: #ffff77;
       height: 180px;
       width: 100%;
