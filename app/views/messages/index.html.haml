@@ -33,11 +33,10 @@
             %th.body 事由
         - @messages.each do |message|
           .main__main-ber__check-box__message-box__message-list
-            %tr
-              %td= message.dayname
-              %td= message.user.name
-              %td= message.absence
-              %td= message.body
+            = message.dayname
+            = message.user.name
+            = message.absence
+            = message.body
 
 
     .main__main-ber__message-form

@@ -22,8 +22,11 @@
       letter-spacing: 1px;
       font-size: 14px;
       font-weight: 200;
-      p {
+      .name {
         color: #f11818;
+        font-size: 11px;
+      }
+      p {
         font-size: 11px;
       }
     }
