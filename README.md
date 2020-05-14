@@ -48,6 +48,7 @@ Things you may want to cover:
   ## messagesテーブル
   |Column|Type|Options|
   |------|----|-------|
+  |dayname|date|null: false|
   |absence|text|null: false|
   |body|text|null: false|
   |user_id|integer|null: false, foreign_key: true|
