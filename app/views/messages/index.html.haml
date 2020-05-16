@@ -10,13 +10,18 @@
         = form_for @day do |f|
           = f.date_field :dayname
           = f.submit "確認完了", class: "action-btn"
-          %p ※日付を選択し、ひとりひとり出欠確認時に
-          %p 　チェック、完了後に確認ボタンをクリック
+          %p ①日付を選択 ④確認ボタンをクリック
+          .main__main-ber__check-box__name-check__member-number
+            出席者合計(名)：
+            = f.text_field :member, class: "member"
+            欠席・遅刻・早退合計(名)：
+            = f.text_field :absence, class: "absence"
           .main__main-ber__check-box__name-check__check
+            %p ②出席者をチェック ③上記人数を入力
             %table
               %tr
                 %th.name 名前
-                %th.check 出欠確認
+                %th.check 出席確認
               = f.collection_check_boxes :user_ids, User.where.not(name: "master").order(name: "ASC"), :id, :name do |user|
                 =user.label do
                   %tr
@@ -32,11 +37,12 @@
             %th.absence 内容
             %th.body 事由
         - @messages.each do |message|
-          .main__main-ber__check-box__message-box__message-list
-            = message.dayname
-            = message.user.name
-            = message.absence
-            = message.body
+          %table
+            %tr
+              %td= message.dayname
+              %td= message.user.name
+              %td= message.absence
+              %td= message.body
 
 
     .main__main-ber__message-form
@@ -56,5 +62,10 @@
           ※①日付を選択  ②欠席or遅刻or早退を選択  ③その事由を入力  ④送信ボタンをクリック
 
   .main__side-ber
-    .main__side-ber__days
-      【データ保存】
+    .main__side-ber__datas
+      %p〔出席データ DL〕
+      =link_to days_path(format: :csv) do
+        = icon('fas','download')
+      %p〔欠席データ DL〕
+      =link_to messages_path(format: :csv) do
+        = icon('fas','download')

@@ -40,6 +40,8 @@ Things you may want to cover:
   |Column|Type|Options|
   |------|----|-------|
   |dayname|date|null: false|
+  |member|text|null: false|
+  |absence|text|null: false|
   ### Association
   - has_many :users, througt: :days_users
   - has_many :days_users
