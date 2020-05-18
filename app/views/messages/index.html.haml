@@ -10,6 +10,8 @@
         = form_for @day do |f|
           = f.date_field :dayname
           = f.submit "確認完了", class: "action-btn"
+          %p.arrow_box 日付の選択、出席確認、人数の入力の漏れはありませんか？再度確認し、確認完了ボタンをクリックください。
+          
           %p ①日付を選択 ④確認ボタンをクリック
           .main__main-ber__check-box__name-check__member-number
             出席(名)：
@@ -60,6 +62,8 @@
             = f.select :absence, [["","○"], ["欠席","欠席"], ["遅刻","遅刻"], ["早退","早退"]]
             = f.text_field :body, class: 'input-message', placeholder: '(例)発熱：38.5℃  インフルエンザ検査の為、病院へ'
             =f.submit '送信', class: 'send-btn'
+            %p.arrow_box 日付の選択、欠席or遅刻or早退の選択、その事由の入力の漏れはありませんか？再度確認し、送信ボタンをクリックください。
+            
         .main__main-ber__message-form__session
           ※①日付を選択  ②欠席or遅刻or早退を選択  ③その事由を入力  ④送信ボタンをクリック
 
