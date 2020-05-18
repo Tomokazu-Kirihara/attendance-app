@@ -21,8 +21,8 @@ This is Kindergarten attendance book.
 rails 5.0.7.2
 
 ## Installation
-
-
+$ git clone https://github.com/Tomokazu-Kirihara/attendance-app.git
+<br>$ cd attendance-app
 
 ## database-design
   ### usersテーブル
