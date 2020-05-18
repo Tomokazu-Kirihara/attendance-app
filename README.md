@@ -3,19 +3,19 @@
 
 ## Name
 **== Childendance ==**
-child + attendance
+<br>child + attendance
 
 ## Description
 This is Kindergarten attendance book.
-You can be contacted for absenteeism.
-You don't have to use a paper attendance book.
-You can save attendance data to your computer.
+<br>You can be contacted for absenteeism.
+<br>You don't have to use a paper attendance book.
+<br>You can save attendance data to your computer.
 
 ## Demo
 ![1](https://user-images.githubusercontent.com/63994393/82180048-ae424700-991a-11ea-8dda-504e383b9279.gif)
-![2](https://user-images.githubusercontent.com/63994393/82180083-c2864400-991a-11ea-8482-22f97c5747d3.gif)
-![3](https://user-images.githubusercontent.com/63994393/82180111-d2058d00-991a-11ea-814c-96a73a7f4585.gif)
-![4](https://user-images.githubusercontent.com/63994393/82180137-e5185d00-991a-11ea-81f5-9e94e3fce861.gif)
+<br>![2](https://user-images.githubusercontent.com/63994393/82180083-c2864400-991a-11ea-8482-22f97c5747d3.gif)
+<br>![3](https://user-images.githubusercontent.com/63994393/82180111-d2058d00-991a-11ea-814c-96a73a7f4585.gif)
+<br>![4](https://user-images.githubusercontent.com/63994393/82180137-e5185d00-991a-11ea-81f5-9e94e3fce861.gif)
 
 ## Requirement
 rails 5.0.7.2
