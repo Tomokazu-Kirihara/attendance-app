@@ -51,6 +51,17 @@
           background-color: white;
           cursor: pointer;
         }
+        .arrow_box {
+          display: none;
+          position: absolute;
+          padding: 8px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;  
+          border-radius: 8px;
+          background: rgb(219, 28, 28);
+          color: #fff;
+          font-size: 15px;
+        }
         p {
           font-size: 12px;
         }
@@ -147,6 +158,17 @@
       width: 60px;
       background-color: white;
       cursor: pointer;
+      }
+      .arrow_box {
+        display: none;
+        position: absolute;
+        padding: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;  
+        border-radius: 8px;
+        background: rgb(219, 28, 28);
+        color: #fff;
+        font-size: 15px;
       }
     }
   }
