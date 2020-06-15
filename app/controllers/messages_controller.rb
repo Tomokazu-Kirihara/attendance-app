@@ -2,6 +2,7 @@ class MessagesController < ApplicationController
 
   def index
     @day = Day.new
+    @days = Day.all.order(dayname: "DESC")
     @messages = Message.all.order(dayname: "DESC")
   end
 
