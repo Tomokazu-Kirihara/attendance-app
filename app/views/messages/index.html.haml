@@ -29,7 +29,7 @@
                 %th.name 名前
                 %th.check 出席確認
               = f.collection_check_boxes :user_ids, User.where.not(name: "master").order(name: "ASC"), :id, :name do |user|
-                =user.label do
+                = user.label do
                   %tr
                     %td= user.object.name
                     %td= user.check_box
@@ -71,10 +71,22 @@
 
   .main__side-ber
     .main__side-ber__datas
+      %h2 【ダウンロード】
       %p〔出欠データ DL〕
       =link_to days_path(format: :csv) do
         = icon('fas','download')
       %p〔欠席データ DL〕
       =link_to messages_path(format: :csv) do
         = icon('fas','download')
-    
+    .main__side-ber__member-datas
+      %h2 【日付別データ】
+      - @days.each do |day|
+        %ul
+          %li= day.dayname
+          %li 出席(名)：
+          %li= day.member
+          %li 欠席・遅刻・早退(名)：
+          %li= day.absence
+          %li 出席者名：
+          %li= day.users.pluck(:name).join(", ")
+          %li -----------------------------------------------------------------------
