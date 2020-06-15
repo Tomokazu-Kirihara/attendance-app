@@ -17,6 +17,11 @@
 <br>・園児の欠席連絡もデータの送受信により行います。
 <br>・幼稚園の教諭/保護者側の双方の時間削減と、ペーパーレス化による費用削減となります。
 
+## 工夫した点
+・CSVを利用したデータのインポート化。
+・出欠確認の際、ダブルチェックを可能としヒューマンエラーを防止。
+・機能の実装は実際に幼稚園の教諭にインタビューを行い設計。
+
 ## :paperclip: 主な使用言語
 <a><img src="https://user-images.githubusercontent.com/39142850/71774533-1ddf1780-2fb4-11ea-8560-753bed352838.png" width="70px;" /></a> <!-- rubyのロゴ -->
 <a><img src="https://user-images.githubusercontent.com/39142850/71774548-731b2900-2fb4-11ea-99ba-565546c5acb4.png" height="60px;" /></a> <!-- RubyOnRailsのロゴ -->
@@ -27,13 +32,14 @@
 
 ## Demo
 ユーザー管理機能：新規登録、ログインが可能です。
-<br>![1]()
+<br>![3906aa0404c621a3caa633f045bc82c3](https://user-images.githubusercontent.com/63994393/84658357-b8bf2300-af50-11ea-8e55-ce1412168733.gif)
 <br>欠席連絡メッセージ機能：園児の欠席連絡内容を送信し、一覧表示します。
-<br>![2]()
+<br>![e9550eb3adf3cd893c352e73950b945e](https://user-images.githubusercontent.com/63994393/84658413-d55b5b00-af50-11ea-8179-1a3e5894ba5c.gif)
 <br>出欠管理機能：園児の出欠確認をデータ入力し、それを表示します。
-<br>![3]()
+<br>![4548822fcc7b9073046003a6342ca728](https://user-images.githubusercontent.com/63994393/84658502-f58b1a00-af50-11ea-85fb-85fba6fcaa11.gif)
 <br>インポート出力機能：データをパソコン内へ保存可能です。
-<br>![4]()
+<br>![081c5a95f6e79e8ce4fb719f2c1d335e](https://user-images.githubusercontent.com/63994393/84658562-09cf1700-af51-11ea-9c41-68c0688f0652.gif)
+<br>!![234a0189b4886ef9e5c0ee5464fb5827](https://user-images.githubusercontent.com/63994393/84658627-210e0480-af51-11ea-9579-1f4a25b319f2.gif)
 
 ## :globe_with_meridians: インストール方法
 $ git clone https://github.com/Tomokazu-Kirihara/attendance-app.git
