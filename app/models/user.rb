@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :messages
 
   validates :name, format: {
-    with: /\A[ぁ-んー－]+\z/,
+    with: /\A[ぁ-んー－]+[\S]+\z/,
     message: "は、ひらがなで入力して下さい"
   },presence: true
 
