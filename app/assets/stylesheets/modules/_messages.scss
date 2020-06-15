@@ -212,5 +212,48 @@
         margin-bottom: 30px;
       }
     }
+    &__comment {
+      position: relative;
+      margin: 2em 10px 2em 40px;
+      padding: 15px;
+      background: #fff0c6;
+      border-radius: 30px;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset,
+                  0 0 5px rgba(0, 0, 0, 0.3) inset,
+                  0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    &__comment:before {  
+      content: "";
+      position: absolute;
+      left: -34px;
+      width: 13px;
+      height: 12px;
+      bottom: 0;
+      background: #fff0c6;
+      border-radius: 50%;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset,
+                  0 0 5px rgba(0, 0, 0, 0.3) inset,
+                  0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    &__comment:after {
+      content: "";
+      position: absolute;
+      left: -20px;
+      width: 20px;
+      height: 18px;
+      bottom: 3px;
+      background: #fff0c6;
+      border-radius: 50%;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset,
+                  0 0 5px rgba(0, 0, 0, 0.3) inset,
+                  0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    &__comment p {
+      font-size: 13px;
+      margin: 0; 
+      padding: 0;
+    }
   }
 }
