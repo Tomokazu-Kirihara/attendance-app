@@ -15,9 +15,10 @@ class DaysController < ApplicationController
     redirect_to root_path
   end
 
-  def update
-    @group = Group.find(params[:id])
-      redirect_to root_path
+  def destroy
+    @days = Day.find(params[:id])
+    @days.destroy
+    redirect_to root_path
   end
   
   private
