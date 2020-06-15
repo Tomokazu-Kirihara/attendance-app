@@ -71,6 +71,14 @@
             width: 40px;
             display: block;
           }
+          &__check-number {
+            background-color: #ffeeff;
+            width: 250px;
+          }
+          p {
+            background-color: #ffeeff;
+            width: 250px;
+          }
         }
         &__check {
           .name {
@@ -84,7 +92,7 @@
             border: solid 1px gray;
             text-align: center;
           }
-          }
+        }
       }
       &__message-box {
         height: 100%;
