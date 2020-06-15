@@ -20,6 +20,8 @@
             = f.text_field :absence, class: "absence"
             合計(名)：
             = User.count - 1
+            .main__main-ber__check-box__name-check__member-number__check-number
+            %p (出席者数を再度数え照合し入力すること)
           .main__main-ber__check-box__name-check__check
             %p ②出席者をチェック ③上記人数を入力
             %table
@@ -75,3 +77,4 @@
       %p〔欠席データ DL〕
       =link_to messages_path(format: :csv) do
         = icon('fas','download')
+    
