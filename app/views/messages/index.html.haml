@@ -11,6 +11,8 @@
           = f.date_field :dayname
           = f.submit "確認完了", class: "action-btn"
           %p.arrow_box 日付の選択、出席確認、人数の入力の漏れはありませんか？再度確認し、確認完了ボタンをクリックください。
+          = link_to day_path(@days.ids), method: :delete, class: "delete-btn" do
+            修正
           %p ①日付を選択 ④確認ボタンをクリック
           .main__main-ber__check-box__name-check__member-number
             出席(名)：
