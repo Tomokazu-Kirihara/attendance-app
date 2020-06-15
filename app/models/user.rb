@@ -8,4 +8,9 @@ class User < ApplicationRecord
   has_many :days, through: :day_users
   has_many :messages
 
+  validates :name, format: {
+    with: /\A[ぁ-んー－]+\z/,
+    message: "は、ひらがなで入力して下さい"
+  },presence: true
+
 end
