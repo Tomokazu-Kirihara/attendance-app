@@ -22,10 +22,11 @@ ActiveRecord::Schema.define(version: 20200514034308) do
   end
 
   create_table "days", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.date     "dayname",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["dayname"], name: "index_days_on_dayname", unique: true, using: :btree
+    t.date     "dayname",                  null: false
+    t.text     "member",     limit: 65535
+    t.text     "absence",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
