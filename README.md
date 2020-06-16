@@ -94,4 +94,4 @@ $ git clone https://github.com/Tomokazu-Kirihara/attendance-app.git
 
   ## 改善点
 幼稚園はクラス分けがある為、1つのグループテーブルを作成し、
-<br>ユーザー（園児）を管理する仕様にする必要がある。
+<br>ユーザー（園児）を管理する仕様にする必要があります。
