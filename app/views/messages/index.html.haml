@@ -29,7 +29,7 @@
               %tr
                 %th.name 名前
                 %th.check 出席確認
-              = f.collection_check_boxes :user_ids, User.where.not(name: "master").order(name: "ASC"), :id, :name do |user|
+              = f.collection_check_boxes :user_ids, User.where.not(name: "きょうゆ").order(name: "ASC"), :id, :name do |user|
                 = user.label do
                   %tr
                     %td= user.object.name
