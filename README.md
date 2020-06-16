@@ -28,7 +28,6 @@
 <a><img src="https://user-images.githubusercontent.com/39142850/71774618-b32edb80-2fb5-11ea-9050-d5929a49e9a5.png" height="60px;" /></a> <!-- Hamlのロゴ -->
 <a><<img src="https://user-images.githubusercontent.com/39142850/71774644-115bbe80-2fb6-11ea-822c-568eabde5228.png" height="60px" /></a> <!-- Scssのロゴ -->
 <a><img src="https://user-images.githubusercontent.com/39142850/71774768-d064a980-2fb7-11ea-88ad-4562c59470ae.png" height="65px;" /></a> <!-- jQueryのロゴ -->
-<a><img src="https://user-images.githubusercontent.com/39142850/71774786-37825e00-2fb8-11ea-8b90-bd652a58f1ad.png" height="60px;" /></a> <!-- AWSのロゴ -->
 
 ## Demo
 （1）ユーザー管理機能：新規登録、ログインが可能です。
@@ -81,7 +80,6 @@ $ git clone https://github.com/Tomokazu-Kirihara/attendance-app.git
   |absence|text|null: false|
   |body|text|null: false|
   |user_id|integer|null: false, foreign_key: true|
-  |day_id|integer|null: false, foreign_key: true|
   #### Association
   - belongs_to :user
 
@@ -93,3 +91,7 @@ $ git clone https://github.com/Tomokazu-Kirihara/attendance-app.git
   #### Association
   - belongs_to :day
   - belongs_to :user
+
+  ## 改善点
+幼稚園はクラス分けがある為、1つのグループテーブルを作成し、
+<br>ユーザー（園児）を管理する仕様にする必要がある。
