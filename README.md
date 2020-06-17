@@ -47,6 +47,12 @@
 
 <br>![234a0189b4886ef9e5c0ee5464fb5827](https://user-images.githubusercontent.com/63994393/84658627-210e0480-af51-11ea-9579-1f4a25b319f2.gif)
 
+## :globe_with_meridians: サイトURL紹介
+URL: https://childendance.herokuapp.com/users/sign_in
+<br>・テストアカウント
+<br>メールアドレス：test@test
+<br>パスワード：test1234
+
 ## :globe_with_meridians: インストール方法
 $ git clone https://github.com/Tomokazu-Kirihara/attendance-app.git
 <br>$ cd attendance-app
