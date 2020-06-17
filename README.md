@@ -49,9 +49,9 @@
 
 ## :globe_with_meridians: サイトURL紹介
 URL: https://childendance.herokuapp.com/users/sign_in
-<br>・テストアカウント
-<br>  メールアドレス：test@test
-<br>  パスワード：test1234
+<br>< テストアカウント >
+<br>メールアドレス：test@test
+<br>パスワード：test1234
 
 ## :globe_with_meridians: インストール方法
 $ git clone https://github.com/Tomokazu-Kirihara/attendance-app.git
