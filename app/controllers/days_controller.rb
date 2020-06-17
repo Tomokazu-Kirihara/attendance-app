@@ -15,12 +15,6 @@ class DaysController < ApplicationController
     redirect_to root_path
   end
 
-  def destroy
-    @days = Day.find(params[:id])
-    @days.destroy
-    redirect_to root_path
-  end
-  
   private
   def day_params
     params.require(:day).permit(:dayname, :member, :absence, user_ids: [])
